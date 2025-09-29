@@ -1,9 +1,12 @@
-import React from 'react'
+import Events from "./Events.jsx"
 
-const App = () => {
+function App() {
   return (
-    <div>App</div>
-  )
+    <>
+    
+    <Events/>
+    </>
+  );
 }
 
-export default App
+export default App;
