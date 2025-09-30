@@ -1,8 +1,19 @@
+import React, { useMemo, useState } from "react";
 import logoSvg from "./Mask group.svg";
 import white_wave from "./Vector271.png"
 import blue_wave from "./Vector270.png"
 import bottom_wave from "./bottom_wave.png"
+import { events, eventCategories } from "./data/events";
+import pattern from "./Pattern.svg"
+
 function Events(){
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const categories = eventCategories;
+
+  const visibleEvents = useMemo(() => {
+    if (selectedCategory === "All") return events;
+    return events.filter((e) => e.category === selectedCategory);
+  }, [selectedCategory]);
 return (
 <div className="bg-bag-color min-h-screen relative">
    <div className="flex flex-wrap">
@@ -16,54 +27,82 @@ return (
  <img src={white_wave} alt="wave" className=" absolute top-0 left-0 w-full h-auto" />
  <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-event-color text-[128px] font-delirium">EVENTS</h1>
   </div>
-  <div>buttons</div>
-<div className="flex p-4">
-  {/* The Card Container - ADD: flex, flex-col, justify-between */}
-  <div className="w-[400px] h-[638px] bg-card-color text-white shadow-lg rounded-tl-xl rounded-br-xl mx-4 flex flex-col justify-between">
-    
-    {/* Top Section Wrapper - Holds Image and Text/Details */}
-    <div>
-      {/* Image/Top Placeholder Area (The m-4 class gives margin all around, creating the inner border effect) */}
-      <div className=" h-56 bg-bag-color rounded-tr-xl rounded-bl-xl m-4 p-4 flex items-center justify-center">
-          {/* Placeholder for the image/design area */}
+  <div className="flex flex-wrap justify-center gap-5 px-50 mt-6">
+        {categories.map((category, index) => (
+          <button
+            key={index}
+            onClick={() => setSelectedCategory(category)}
+            className={`px-5 py-0 text-xl font-medium transition-colors border-3 border-[#365E7C] rounded-tl-sm rounded-br-sm ${
+              category === selectedCategory
+                ? "bg-[#8EB7BD] text-white"
+                : "bg-[#8EB7BD] text-white hover:bg-[#365E7C]"
+            }`}
+          >
+            {category}
+          </button>
+        ))}
       </div>
-      
-      {/* Card Body and Content */}
-      <div className="p-4">
-        <h2 className="text-3xl font-semibold mb-1">Designathon</h2>
-        <p className="text-sm opacity-75 mb-6">by 300DPI</p>
+      <div className="flex p-4 flex-wrap">
+  {visibleEvents.map((evt) => (
+    <div
+      key={evt.id}
+      className="w-[400px] h-[638px] bg-card-color text-white shadow-lg rounded-tl-xl rounded-br-xl mx-4 mb-6 flex flex-col justify-between overflow-hidden"
+    >
+      {/* IMAGE SECTION*/}
+      <div className="h-[300px] bg-bag-color rounded-tr-xl rounded-bl-xl m-4 p-4 flex items-center justify-center">
+        {evt.image ? (
+          <img
+            src={evt.image}
+            alt={evt.name}
+            className="max-h-full max-w-full object-contain"
+          />
+        ) : null}
+      </div>
 
-        {/* Date/Time/Location/Type Grid */}
-        <div className="grid grid-cols-2 gap-y-4 gap-x-6 text-sm mb-8">
-          <div>
-            <p className="uppercase text-s opacity-50">Date</p>
-            <p className="font-md">17 Nov 2023</p>
+      {/* CONTENT + PATTERN */}
+      <div
+        className="flex flex-col justify-between flex-grow"
+        style={{
+          backgroundImage: `url(${pattern})`,
+          backgroundRepeat: "repeat",
+          backgroundSize: "120px 120px",
+          opacity: 1,
+           // keeps text visible while showing pattern
+        }}
+      >
+        {/* TEXT */}
+        <div className="p-4 z-10">
+          <h2 className="text-3xl font-semibold mb-1">{evt.name}</h2>
+          <p className="text-sm opacity-75 mb-6">by {evt.conductedBy}</p>
+          <div className="grid grid-cols-2 gap-y-4 gap-x-6 text-sm mb-8">
+            <div>
+              <p className="uppercase text-xs opacity-50">Date</p>
+              <p className="font-medium">{evt.date}</p>
+            </div>
+            <div>
+              <p className="uppercase text-xs opacity-50">Time</p>
+              <p className="font-medium">{evt.time}</p>
+            </div>
+            <div>
+              <p className="uppercase text-xs opacity-50">Location</p>
+              <p className="font-medium">{evt.location}</p>
+            </div>
+            <div>
+              <p className="uppercase text-xs opacity-50">Type</p>
+              <p className="font-medium">{evt.type}</p>
+            </div>
           </div>
-          <div>
-            <p className="uppercase text-s opacity-50">Time</p>
-            <p className="font-medium">9:00AM - 12:00PM</p>
-          </div>
-          <div>
-            <p className="uppercase text-xs opacity-50">Location</p>
-            <p className="font-medium">JVC Auditorium</p>
-          </div>
-          <div>
-            <p className="uppercase text-xs opacity-50">Type</p>
-            <p className="font-medium">Solo Event</p>
+        </div>
+          {/* button */}
+          <div className="p-4 pt-0">
+            <button className="w-full py-3 bg-[#698B99] hover:bg-[#799BA8] transition-colors font-medium rounded-lg">
+              View Details
+            </button>
           </div>
         </div>
       </div>
-    </div>
-    
-    {/* View Details Button - Moved outside the main text content, ADD: p-4 for button padding */}
-    <div className="p-4 pt-0">
-      <button className="w-full py-3 bg-[#698B99] hover:bg-[#799BA8] transition-colors font-medium rounded-lg">
-        View Details
-      </button>
-    </div>
+    ))}
   </div>
-</div>
-      
   <div className="h-auto bottom-0  "> 
 <img src={bottom_wave} className="h-auto w-full "/>
   </div>
