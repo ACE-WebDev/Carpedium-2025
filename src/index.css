@@ -4,6 +4,7 @@
 	--color-bag-color: #8EB7BD;
 	--font-delirium: "DELIRIUM NCV", ui-sans-serif, system-ui, sans-serif;
 	--font-delirium-neon: "DELIRIUM NEON NCV", ui-sans-serif, system-ui, sans-serif;
+	--font-lexend: "Lexend Deca", ui-sans-serif, system-ui, sans-serif;
 	--color-card-color:#365E7C;
 	}
 
@@ -22,4 +23,23 @@
 	font-weight: 400 900;
 	font-style: normal;
 	font-display: swap;
+}
+
+/* Lexend Deca variable font */
+@font-face {
+	font-family: "Lexend Deca";
+	src: url("./LexendDeca-VariableFont_wght.ttf") format("truetype");
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Apply globally (optional) */
+body {
+	font-family: var(--font-lexend);
+}
+
+/* Utility class if you want to opt-in per element */
+.font-lexend {
+	font-family: "Lexend Deca", ui-sans-serif, system-ui, sans-serif;
 }
