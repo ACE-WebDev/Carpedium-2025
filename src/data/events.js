@@ -1,3 +1,7 @@
+import designClubImg from "../design_club.png";
+import paperDressImg from "../paper_dress.jpg";
+import streetDanceImg from "../street_dance.jpg";
+
 export const events = [
   {
     id: "designathon-2023",
@@ -8,7 +12,7 @@ export const events = [
     time: "9:00AM - 12:00PM",
     location: "JVC Auditorium",
     type: "Solo Event",
-    image: null
+    image: designClubImg
   },
   {
     id: "dance-showdown",
@@ -19,7 +23,7 @@ export const events = [
     time: "2:00PM - 5:00PM",
     location: "Main Stage",
     type: "Team Event",
-    image: null
+    image: streetDanceImg
   },
   {
     id: "lens-photo-walk",
@@ -42,7 +46,7 @@ export const events = [
     time: "11:00AM - 1:00PM",
     location: "JNC",
     type: "Team Event",
-    image: null
+    image: paperDressImg
   },
   {
     id: "ui-ux-workshop",
