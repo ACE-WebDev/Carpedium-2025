@@ -1,6 +1,8 @@
 import designClubImg from "../design_club.png";
 import paperDressImg from "../paper_dress.jpg";
 import streetDanceImg from "../street_dance.jpg";
+import camera from "../photography.jpg";
+import ui_ux from "../ui_ux.jpg";
 
 export const events = [
   {
@@ -12,7 +14,9 @@ export const events = [
     time: "9:00AM - 12:00PM",
     location: "JVC Auditorium",
     type: "Solo Event",
-    image: designClubImg
+    image: designClubImg,
+    description:"lorem epsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    glink:"https://www.google.com/imgres?q=ui%2Fux%20designer&imgurl=https%3A%2F%2Ffronty.com%2Fstatic%2Fuploads%2Fdesign_vs.jpg&imgrefurl=https%3A%2F%2Ffronty.com%2Fui-vs-ux-designer%2F&docid=UoZXjtvdQ7CcZM&tbnid=M81oYRNymzfS6M&vet=12ahUKEwiEm-r9o4GQAxV1TGwGHdfuDdIQM3oECCUQAA..i&w=1920&h=1080&hcb=2&ved=2ahUKEwiEm-r9o4GQAxV1TGwGHdfuDdIQM3oECCUQAA"
   },
   {
     id: "dance-showdown",
@@ -23,7 +27,9 @@ export const events = [
     time: "2:00PM - 5:00PM",
     location: "Main Stage",
     type: "Team Event",
-    image: streetDanceImg
+    image: streetDanceImg,
+    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    glink:"https://www.google.com/imgres?q=ui%2Fux%20designer&imgurl=https%3A%2F%2Ffronty.com%2Fstatic%2Fuploads%2Fdesign_vs.jpg&imgrefurl=https%3A%2F%2Ffronty.com%2Fui-vs-ux-designer%2F&docid=UoZXjtvdQ7CcZM&tbnid=M81oYRNymzfS6M&vet=12ahUKEwiEm-r9o4GQAxV1TGwGHdfuDdIQM3oECCUQAA..i&w=1920&h=1080&hcb=2&ved=2ahUKEwiEm-r9o4GQAxV1TGwGHdfuDdIQM3oECCUQAA"
   },
   {
     id: "lens-photo-walk",
@@ -34,7 +40,9 @@ export const events = [
     time: "7:00AM - 10:00AM",
     location: "Campus Grounds",
     type: "Solo Event",
-    image: null
+    image:camera ,
+    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    glink:"https://www.google.com/imgres?q=ui%2Fux%20designer&imgurl=https%3A%2F%2Ffronty.com%2Fstatic%2Fuploads%2Fdesign_vs.jpg&imgrefurl=https%3A%2F%2Ffronty.com%2Fui-vs-ux-designer%2F&docid=UoZXjtvdQ7CcZM&tbnid=M81oYRNymzfS6M&vet=12ahUKEwiEm-r9o4GQAxV1TGwGHdfuDdIQM3oECCUQAA..i&w=1920&h=1080&hcb=2&ved=2ahUKEwiEm-r9o4GQAxV1TGwGHdfuDdIQM3oECCUQAA"
   },
    // existing events...
    {
@@ -46,7 +54,9 @@ export const events = [
     time: "11:00AM - 1:00PM",
     location: "JNC",
     type: "Team Event",
-    image: paperDressImg
+    image: paperDressImg,
+    description:"lorem epsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    glink:"https://www.google.com/imgres?q=ui%2Fux%20designer&imgurl=https%3A%2F%2Ffronty.com%2Fstatic%2Fuploads%2Fdesign_vs.jpg&imgrefurl=https%3A%2F%2Ffronty.com%2Fui-vs-ux-designer%2F&docid=UoZXjtvdQ7CcZM&tbnid=M81oYRNymzfS6M&vet=12ahUKEwiEm-r9o4GQAxV1TGwGHdfuDdIQM3oECCUQAA..i&w=1920&h=1080&hcb=2&ved=2ahUKEwiEm-r9o4GQAxV1TGwGHdfuDdIQM3oECCUQAA"
   },
   {
     id: "ui-ux-workshop",
@@ -57,7 +67,9 @@ export const events = [
     time: "3:00PM - 5:00PM",
     location: "Seminar Hall",
     type: "Team Event",
-    image: null
+    image: ui_ux,
+    description:"lorem epsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    glink:"https://www.google.com/imgres?q=ui%2Fux%20designer&imgurl=https%3A%2F%2Ffronty.com%2Fstatic%2Fuploads%2Fdesign_vs.jpg&imgrefurl=https%3A%2F%2Ffronty.com%2Fui-vs-ux-designer%2F&docid=UoZXjtvdQ7CcZM&tbnid=M81oYRNymzfS6M&vet=12ahUKEwiEm-r9o4GQAxV1TGwGHdfuDdIQM3oECCUQAA..i&w=1920&h=1080&hcb=2&ved=2ahUKEwiEm-r9o4GQAxV1TGwGHdfuDdIQM3oECCUQAA"
   }
 
 ];
