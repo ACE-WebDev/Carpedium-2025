@@ -1,11 +1,7 @@
-import LandingPage from "./assets/landingpage.jsx"
-
 function App() {
-  return(
-  <>
- <LandingPage />
- </>
-);
-}
+  return (
+    <>
+    </>
+  );
 
 export default App;

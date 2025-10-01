@@ -1,1 +1,26 @@
 @import 'tailwindcss';
+
+@theme {
+	--color-bag-color: #8EB7BD;
+	--font-delirium: "DELIRIUM NCV", ui-sans-serif, system-ui, sans-serif;
+	--font-delirium-neon: "DELIRIUM NEON NCV", ui-sans-serif, system-ui, sans-serif;
+	--color-card-color:#365E7C;
+	--color-event-color:#F6F0DC ;
+	}
+
+@font-face {
+	font-family: "DELIRIUM NCV";
+	src: url("/fonts/DELIRIUM_NCV.ttf") format("truetype");
+	font-weight: 400 900;
+	font-style: regular;
+	font-display: swap;
+	font-size: 128px;
+}
+
+@font-face {
+	font-family: "DELIRIUM NEON NCV";
+	src: url("/fonts/DELIRIUM_NEON_NCV.ttf") format("truetype");
+	font-weight: 400 900;
+	font-style: normal;
+	font-display: swap;
+}
