@@ -9,6 +9,7 @@ import pattern from "./Pattern.png";
 function Events() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
   const categories = eventCategories;
@@ -137,7 +138,7 @@ function Events() {
         <button
           aria-label="Open menu"
           className="hidden mobile-menu-button"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={() => setMenuOpen(!menuOpen)}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#365E7C" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <line x1="3" y1="6" x2="21" y2="6" />
@@ -145,14 +146,55 @@ function Events() {
             <line x1="3" y1="18" x2="21" y2="18" />
           </svg>
         </button>
-        {isMenuOpen ? (
-          <div className="mobile-menu-panel">
-            <a href="#about" className="mobile-menu-link" onClick={() => setIsMenuOpen(false)}>About</a>
-            <a href="#events" className="mobile-menu-link" onClick={() => setIsMenuOpen(false)}>Events</a>
-            <a href="#sponsors" className="mobile-menu-link" onClick={() => setIsMenuOpen(false)}>Sponsors</a>
-            <a href="#contact" className="mobile-menu-link" onClick={() => setIsMenuOpen(false)}>Contact</a>
+        {menuOpen && (
+          <div
+            id="mobile-menu"
+            className="fixed top-0 right-0 w-full border border-[#10124C] bg-[#365E7C] z-50 flex flex-col md:hidden"
+          >
+            {/* Close Button */}
+            <div className="flex justify-end p-4">
+              <button
+                onClick={() => setMenuOpen(false)}
+                className="text-[#f7f1dc] text-2xl font-bold"
+              >
+                &times;
+              </button>
+            </div>
+
+            {/* Menu Links */}
+            <a
+              onClick={() => setMenuOpen(false)}
+              href="#about"
+              className="px-40 py-3 text-lg font-medium text-[#f7f1dc]"
+            >
+              About
+            </a>
+            <hr />
+            <a
+              onClick={() => setMenuOpen(false)}
+              href="#events"
+              className="px-40 py-3 text-lg font-medium text-[#f7f1dc]"
+            >
+              Events
+            </a>
+            <hr />
+            <a
+              onClick={() => setMenuOpen(false)}
+              href="#sponsors"
+              className="px-40 py-3 text-lg font-medium text-[#f7f1dc]"
+            >
+              Sponsors
+            </a>
+            <hr />
+            <a
+              onClick={() => setMenuOpen(false)}
+              href="#contact"
+              className="px-40 py-3 text-lg font-medium text-[#f7f1dc]"
+            >
+              Contact
+            </a>
           </div>
-        ) : null}
+        )}
       </div>
       <div className="relative mt-[80px] mobile-hero">
         <img src={blue_wave} alt="wave" className="w-full h-auto" />
