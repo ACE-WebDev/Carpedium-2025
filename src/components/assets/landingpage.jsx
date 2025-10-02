@@ -21,17 +21,34 @@ function LandingPage() {
     return () => document.removeEventListener("click", handleClickOutside);
   }, [menuOpen]);
 
+  // Define colors
+  const DARK_COLOR = "#10124C"; // Dark blue
+  const LIGHT_TEXT_COLOR = "#F7F1DC"; // Light text for contrast
+  const BG_BLUE = "#8EB7BD"; // Background blue
+
   return (
-    <div className="relative min-h-screen bg-[#8EB7BD] overflow-hidden flex flex-col">
+    <div
+      className="relative min-h-[140vh] overflow-hidden flex flex-col"
+      style={{ backgroundColor: BG_BLUE }}
+    >
       {/* Header */}
       <header className="flex items-center justify-between px-6 py-4 relative z-20">
         {/* Logo */}
         <div className="w-[100px] md:w-[150px]">
           <div
-            className="w-full h-[60px] bg-[#10124C]
-              [mask-image:url('/carpe_img.png')] [mask-repeat:no-repeat] [mask-position:center] [mask-size:contain]
-              [-webkit-mask-image:url('/carpe_img.png')] [-webkit-mask-repeat:no-repeat] [-webkit-mask-position:center] [-webkit-mask-size:contain]"
-          ></div>
+            className="w-full h-[60px]"
+            style={{
+              backgroundColor: DARK_COLOR,
+              WebkitMaskImage: "url('/carpe_img.png')",
+              WebkitMaskRepeat: "no-repeat",
+              WebkitMaskPosition: "center",
+              WebkitMaskSize: "contain",
+              maskImage: "url('/carpe_img.png')",
+              maskRepeat: "no-repeat",
+              maskPosition: "center",
+              maskSize: "contain",
+            }}
+          />
         </div>
 
         {/* Hamburger */}
@@ -40,23 +57,23 @@ function LandingPage() {
           className="md:hidden flex flex-col gap-1 cursor-pointer"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          <span className="w-6 h-[3px] bg-[#10124C]"></span>
-          <span className="w-6 h-[3px] bg-[#10124C]"></span>
-          <span className="w-6 h-[3px] bg-[#10124C]"></span>
+          <span className="w-6 h-[3px]" style={{ backgroundColor: DARK_COLOR }} />
+          <span className="w-6 h-[3px]" style={{ backgroundColor: DARK_COLOR }} />
+          <span className="w-6 h-[3px]" style={{ backgroundColor: DARK_COLOR }} />
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-10 text-[#10124C] font-medium text-lg">
-          <Link to="/" className="hover:scale-105 transition">
+        <nav className="hidden md:flex gap-10 font-medium text-lg">
+          <Link to="/" className="hover:scale-105 transition" style={{ color: DARK_COLOR }}>
             Home
           </Link>
-          <Link to="/events" className="hover:scale-105 transition">
+          <Link to="/events" className="hover:scale-105 transition" style={{ color: DARK_COLOR }}>
             Events
           </Link>
-          <Link to="#sponsors" className="hover:scale-105 transition">
+          <Link to="#sponsors" className="hover:scale-105 transition" style={{ color: DARK_COLOR }}>
             Sponsors
           </Link>
-          <Link to="#contact" className="hover:scale-105 transition">
+          <Link to="#contact" className="hover:scale-105 transition" style={{ color: DARK_COLOR }}>
             Contact
           </Link>
         </nav>
@@ -66,12 +83,14 @@ function LandingPage() {
       {menuOpen && (
         <div
           id="mobile-menu"
-          className="fixed inset-0 bg-[#365E7C] z-50 flex flex-col"
+          className="fixed inset-0 z-50 flex flex-col"
+          style={{ backgroundColor: DARK_COLOR }}
         >
           <div className="flex justify-end p-4">
             <button
               onClick={() => setMenuOpen(false)}
-              className="text-[#f7f1dc] text-2xl font-bold"
+              className="text-2xl font-bold"
+              style={{ color: LIGHT_TEXT_COLOR }}
             >
               &times;
             </button>
@@ -86,7 +105,8 @@ function LandingPage() {
               key={item.name}
               to={item.path}
               onClick={() => setMenuOpen(false)}
-              className="px-10 py-4 text-lg font-medium text-[#f7f1dc] text-center"
+              className="px-10 py-4 text-lg font-medium text-center"
+              style={{ color: LIGHT_TEXT_COLOR }}
             >
               {item.name}
             </Link>
@@ -99,17 +119,23 @@ function LandingPage() {
         {/* Carpe Image */}
         <img
           src="/carpe_img.png"
-          alt="Carpedium"
-          className="w-[300px] md:w-[600px] lg:w-[800px] h-auto object-contain relative z-20"
+          alt="Carpediem"
+          className="w-full max-w-[800px] h-auto object-contain relative z-10 mt-[-70px]"
         />
 
         {/* Year */}
-        <div className="mt-6 text-[#F7F1DC] font-['Playfair_Display'] font-bold text-4xl md:text-6xl relative z-20">
+        <div
+          className="mt-6 text-[4rem] md:text-[6rem] font-['Playfair_Display'] font-bold relative z-20"
+          style={{ color: LIGHT_TEXT_COLOR, marginLeft: '-130px' }}
+        >
           2025
         </div>
 
         {/* Wave behind content */}
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[500px] md:w-[880px] z-0">
+        <div
+          className="absolute left-1/2 -translate-x-1/2 z-20"
+          style={{ top: '40%', width: '500px', maxWidth: '880px' }}
+        >
           <img
             src="/wave.png"
             alt="wave"
@@ -119,7 +145,7 @@ function LandingPage() {
       </main>
 
       {/* Bottom wave */}
-      <div className="absolute bottom-0 left-0 w-full z-0">
+      <div className="absolute bottom-0 left-0 w-full z-10">
         <img
           src="/buttom_wave.png"
           alt="bottom_wave"
