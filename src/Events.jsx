@@ -43,6 +43,7 @@ function Events() {
     return events.filter((e) => e.category === selectedCategory);
   }, [selectedCategory, events]);
 
+    
   return (
     <div className="bg-bag-color min-h-screen relative">
       {loading && (

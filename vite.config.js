@@ -6,7 +6,8 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     headers: {
-      'Content-Security-Policy': "script-src 'self' 'unsafe-inline' 'unsafe-eval' http://localhost:* https://localhost:*; connect-src 'self' http://localhost:* https://localhost:*;"
+      "Content-Security-Policy":
+        "default-src 'self'; connect-src 'self' http://localhost:* https://localhost:* https://bopgdnrglovormebwmza.supabase.co; img-src * data: blob:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
     }
   }
 })
