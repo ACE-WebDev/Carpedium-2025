@@ -1,9 +1,16 @@
-import { Footer } from "./Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Events from "./Events";
 
 function App() {
   return (
-    <>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/events" element={<Events />} />
+      </Routes>
+    </Router>
   );
 }
-export default App
+
+export default App;
