@@ -126,7 +126,7 @@ function LandingPage() {
         {/* Year */}
         <div
           className="mt-6 text-[4rem] md:text-[6rem] font-['Playfair_Display'] font-bold relative z-20"
-          style={{ color: LIGHT_TEXT_COLOR, marginLeft: '-130px' }}
+          style={{ color: LIGHT_TEXT_COLOR }}
         >
           2025
         </div>
