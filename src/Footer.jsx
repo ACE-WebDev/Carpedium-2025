@@ -9,7 +9,57 @@ export const Footer = () => {
         <div className="text-white font-[DeliriumNCV] text-[5rem] text-center mb-10 hidden md:block">
           <p>Contact Us</p>
         </div>
-        <div className="grid grid-cols-[1fr_1fr_1fr_1fr_1fr] justify-center hidden md:flex w-full">
+
+        <div className="sm:hidden lg:flex md:flex xl:hidden hidden border-t-2 border-b-0 border-[#88cdff84] text-[#8eb7bd] font-[DeliriumNCV] text-[3rem] py-4 justify-center">
+          CORE COMMITTEE
+        </div>
+        <div className="flex flex-row justify-center sm:hidden xl:hidden hidden lg:flex md:flex">
+          <div className="w-full flex flex-col text-white border-t-2 border-b-2 border-[#88cdff84] px-7 py-4 text-2xl font-[LexendDeca]">
+            <div className="m-1 md:m-3 py-3 text-center">
+              <p>Amirthavarshini</p>
+              <p className="text-[1rem]">+91 99529 64049</p>
+            </div>
+            <div className="m-1 md:m-3 py-3 text-center">
+              <p>Amrutha</p>
+              <p className="text-[1rem]">+91 93619 71610</p>
+            </div>
+            <div className="m-1 md:m-3 py-3 text-center">
+              <p>Mukilan</p>
+              <p className="text-[1rem]">+91 93844 37698</p>
+            </div>
+          </div>
+          <div className="w-full flex flex-col text-white border-l-2 border-t-2  border-b-2 border-[#88cdff84] px-7 py-4 text-2xl font-[LexendDeca]">
+            <div className="m-1 md:m-3 py-3 text-center">
+              <p>Rajesh</p>
+              <p className="text-[1rem]">+91 80724 37287</p>
+            </div>
+            <div className="m-1 md:m-3 py-3 text-center">
+              <p>Shanjay</p>
+              <p className="text-[1rem]">+91 96009 23014</p>
+            </div>
+          </div>
+        </div>
+        <div className="sm:hidden xl:hidden hidden  border-t-0 border-b-0 border-[#88cdff84] text-[#8eb7bd] font-[DeliriumNCV] text-[3rem] py-4 flex justify-center lg:flex md:flex">
+          TECH SUPPORT
+        </div>
+        <div className="flex flex-row justify-center hidden sm:hidden xl:hidden lg:flex md:flex">
+          <div className="w-full flex flex-col text-white md:border-t-2 border-t-2 border-b-2 border-[#88cdff84] px-7 py-4 text-2xl font-[LexendDeca]">
+            <div className="m-1 md:m-3 py-2 text-center">
+              <p>Pranav Ram</p>
+              <p className="text-[1rem]">+91 75988 69566</p>
+            </div>
+          </div>
+          <div className="w-full flex flex-col text-white border-l-2 md:border-t-2 border-t-2  border-b-2 border-[#88cdff84] px-7 py-4 text-2xl font-[LexendDeca]">
+            <div className="m-1 md:m-3 py-2 text-center">
+              <p>Ayswar GSS</p>
+              <p className="text-[1rem]">+91 72000 80364</p>
+            </div>
+          </div>
+        </div>
+        
+
+
+        <div className="grid grid-cols-[1fr_1fr_1fr_1fr_1fr] justify-center hidden md:hidden xl:grid">
           <div className="flex flex-col text-white border-r-4 border-t-4 border-b-2 border-[#88cdff84] p-16 font-[LexendDeca] w-full"></div>
           <div className="w-full flex flex-col text-white border-r-4 border-t-4 border-b-2 border-[#88cdff84] px-20 py-10 text-[1.6rem] font-thin font-[LexendDeca]">
             <div className="m-1 md:m-3">
@@ -48,7 +98,7 @@ export const Footer = () => {
           <div className="w-full flex flex-col text-white border-t-4 border-b-2 border-[#88cdff84] p-16 text-2xl font-[LexendDeca]"></div>
         </div>
         <div className="hidden md:grid grid-cols-[1.5fr_1fr_1fr_1fr_1fr_1fr_1fr] w-full">
-          <div className="border-t-2 border-b-4 border-[#88cdff84] text-white font-[DeliriumNCV] text-[3rem] border-r-2 flex justify-center items-center">
+          <div className="border-t-2 md:text-[3rem] lg:text-[3rem] border-b-4 border-[#88cdff84] text-white font-[DeliriumNCV] text-[3rem] border-r-2 flex justify-center items-center">
             FOLLOW US
           </div>
           <div className="border-t-2 border-b-4 border-l-2 border-r-2 border-[#88cdff84] flex justify-center items-center py-10">
@@ -61,7 +111,7 @@ export const Footer = () => {
                 width="51"
                 height="51"
                 viewBox="0 0 51 51"
-                className="w-[43px] cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:rotate-12 hover:scale-110"
+                className="w-[43px] md:w-[35px] lg:w-[35px] cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:rotate-12 hover:scale-110"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -83,7 +133,7 @@ export const Footer = () => {
                 height="55"
                 viewBox="0 0 52 55"
                 fill="none"
-                className="w-[43px] cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:rotate-12 hover:scale-110"
+                className="w-[43px] md:w-[35px] lg:w-[35px] cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:rotate-12 hover:scale-110"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
@@ -104,7 +154,7 @@ export const Footer = () => {
                 height="53"
                 viewBox="0 0 53 53"
                 fill="none"
-                className="w-[43px] cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:rotate-12 hover:scale-110"
+                className="w-[43px] md:w-[35px] lg:w-[35px] cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:rotate-12 hover:scale-110"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
@@ -129,7 +179,7 @@ export const Footer = () => {
                 height="52"
                 viewBox="0 0 52 52"
                 fill="none"
-                className="w-[43px] cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:rotate-12 hover:scale-110"
+                className="w-[43px] md:w-[35px] lg:w-[35px] cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:rotate-12 hover:scale-110"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
@@ -164,7 +214,7 @@ export const Footer = () => {
                 height="52"
                 viewBox="0 0 52 52"
                 fill="none"
-                className="w-[43px] cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:rotate-12 hover:scale-110"
+                className="w-[43px] md:w-[35px] lg:w-[35px] cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:rotate-12 hover:scale-110"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
@@ -188,6 +238,7 @@ export const Footer = () => {
           <div className="">@2025</div>
           <div className="">Made with ❤ by ACE X 300DPI</div>
         </div>
+
         <div className="md:hidden border-t-2 border-b-0 border-[#88cdff84] text-[#8eb7bd] font-[DeliriumNCV] text-[2rem] py-4 flex justify-center">
           CORE COMMITTEE
         </div>
@@ -234,6 +285,7 @@ export const Footer = () => {
             </div>
           </div>
         </div>
+
         <div className="md:hidden border-t-0 border-b-2 border-[#88cdff84] text-[#8eb7bd] font-[DeliriumNCV] text-[2rem] py-4 flex justify-left pl-7">
           FOLLOW US
         </div>
