@@ -2,7 +2,7 @@ import React from "react";
 export const Footer = () => {
   return (
     <>
-      <div className="bg-[url('/about_bg.svg')] bg-cover bg-center">
+      <div className="bg-[url('/about_bg.svg')] bg-cover bg-center -mt-px">
         <div>
           <img src="/src/logo.png" className="mx-auto md:w-[350px] w-[220px]" />
         </div>
