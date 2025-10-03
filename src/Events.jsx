@@ -1,8 +1,8 @@
 import React, { useEffect, useMemo, useState } from "react";
 import logoSvg from "./Mask group.svg";
-import white_wave from "./Vector271.png";
-import blue_wave from "./Vector270.png";
-import bottom_wave from "./bottom_wave.png";
+import white_wave from "/Vector271.png";
+import blue_wave from "/Vector270.png";
+import bottom_wave from "/bottom_wave.png";
 import { fetchEvents } from "./supabaseData"; // fetch from Supabase
 import pattern from "./Pattern.png";
 import { Footer } from "./Footer";
@@ -70,7 +70,7 @@ function Events() {
               alt="logo"
               className="w-[80px] h-[40px] md:w-[142px] md:h-[68px]"
             />
-            
+
             {/* Desktop Navigation - Centered */}
             <nav className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
               <ul className="flex gap-8 lg:gap-16 xl:gap-24 font-bold text-lg lg:text-xl items-center">
@@ -119,7 +119,7 @@ function Events() {
                 <line x1="3" y1="18" x2="21" y2="18" />
               </svg>
             </button>
-            
+
             {/* Mobile Menu Overlay */}
             {menuOpen && (
               <div className="fixed inset-0 z-40 md:hidden bg-[#10124C]">
@@ -133,7 +133,7 @@ function Events() {
                       ×
                     </button>
                   </div>
-                  
+
                   {/* Navigation Links */}
                   <nav className="flex flex-col justify-center items-center flex-grow space-y-8">
                     {["Home", "Events", "Sponsors", "Contact"].map((link) => (
@@ -171,11 +171,10 @@ function Events() {
               <button
                 key={index}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-3 py-2 sm:px-5 sm:py-3 text-sm sm:text-lg md:text-xl font-medium transition-all duration-200 border-2 border-[#365E7C] rounded-tl-md rounded-br-md ${
-                  category === selectedCategory
+                className={`px-3 py-2 sm:px-5 sm:py-3 text-sm sm:text-lg md:text-xl font-medium transition-all duration-200 border-2 border-[#365E7C] rounded-tl-md rounded-br-md ${category === selectedCategory
                     ? "bg-[#365E7C] text-white scale-105"
                     : "bg-[#8EB7BD] text-white hover:bg-[#365E7C] hover:scale-105"
-                }`}
+                  }`}
               >
                 {category}
               </button>
@@ -285,8 +284,8 @@ function Events() {
                   )}
                   <div className="space-y-3">
                     <p className="opacity-90 text-sm sm:text-base leading-relaxed">
-                        {selectedEvent.description ||
-                         `${selectedEvent.name} by ${selectedEvent.conductedBy}.`}
+                      {selectedEvent.description ||
+                        `${selectedEvent.name} by ${selectedEvent.conductedBy}.`}
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                       <div>
