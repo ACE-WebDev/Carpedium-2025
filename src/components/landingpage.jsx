@@ -51,19 +51,8 @@ function LandingPage() {
           />
         </div>
 
-        {/* Hamburger */}
-        <div
-          id="hamburger-btn"
-          className="md:hidden flex flex-col gap-1 cursor-pointer"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          <span className="w-6 h-[3px]" style={{ backgroundColor: DARK_COLOR }} />
-          <span className="w-6 h-[3px]" style={{ backgroundColor: DARK_COLOR }} />
-          <span className="w-6 h-[3px]" style={{ backgroundColor: DARK_COLOR }} />
-        </div>
-
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-10 font-medium text-lg">
+        {/* Desktop Nav - Centered */}
+        <nav className="hidden md:flex gap-10 font-medium text-lg absolute left-1/2 transform -translate-x-1/2">
           <Link to="/" className="hover:scale-105 transition" style={{ color: DARK_COLOR }}>
             Home
           </Link>
@@ -77,6 +66,17 @@ function LandingPage() {
             Contact
           </Link>
         </nav>
+
+        {/* Hamburger */}
+        <div
+          id="hamburger-btn"
+          className="md:hidden flex flex-col gap-1 cursor-pointer ml-auto"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span className="w-6 h-[3px]" style={{ backgroundColor: DARK_COLOR }} />
+          <span className="w-6 h-[3px]" style={{ backgroundColor: DARK_COLOR }} />
+          <span className="w-6 h-[3px]" style={{ backgroundColor: DARK_COLOR }} />
+        </div>
       </header>
 
       {/* Mobile Menu */}

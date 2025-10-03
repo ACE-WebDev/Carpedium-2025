@@ -9,6 +9,21 @@
   --color-event-color: #f6f0dc;
 }
 
+/* Utility classes for text truncation */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
 @font-face {
   font-family: "DELIRIUM NCV";
   src: url("/fonts/DELIRIUM_NCV.ttf") format("truetype");
