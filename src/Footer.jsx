@@ -37,12 +37,12 @@ export const Footer = () => {
           </div>
           <div className="w-full flex flex-col text-white border-r-4 border-t-4 border-b-2 border-[#88cdff84] px-20 py-10 text-[1.6rem] font-thin font-[LexendDeca]">
             <div className="m-1 md:m-3">
-              <p>Sarveswaran</p>
-              <p className="whitespace-nowrap">+91 63697 25682</p>
-            </div>
-            <div className="m-1 md:m-3">
               <p>Pranav Ram</p>
               <p className="whitespace-nowrap">+91 75988 69566</p>
+            </div>
+            <div className="m-1 md:m-3">
+              <p>Ayswar GSS</p>
+              <p className="whitespace-nowrap">+91 72000 80364</p>
             </div>
           </div>
           <div className="w-full flex flex-col text-white border-t-4 border-b-2 border-[#88cdff84] p-16 text-2xl font-[LexendDeca]"></div>
@@ -223,14 +223,14 @@ export const Footer = () => {
         <div className="flex flex-row justify-center md:hidden">
           <div className="w-full flex flex-col text-white md:border-t-2 border-t-2 border-b-2 border-[#88cdff84] px-7 py-4 text-sm font-[LexendDeca]">
             <div className="m-1 md:m-3 py-2 text-center">
-              <p>Sarveswaran</p>
-              <p className="text-[0.7rem]">+91 63697 25682</p>
+              <p>Pranav Ram</p>
+              <p className="text-[0.7rem]">+91 75988 69566</p>
             </div>
           </div>
           <div className="w-full flex flex-col text-white border-l-2 md:border-t-2 border-t-2  border-b-2 border-[#88cdff84] px-7 py-4 text-sm font-[LexendDeca]">
             <div className="m-1 md:m-3 py-2 text-center">
-              <p>Pranav Ram</p>
-              <p className="text-[0.7rem]">+91 75988 69566</p>
+              <p>Ayswar GSS</p>
+              <p className="text-[0.7rem]">+91 72000 80364</p>
             </div>
           </div>
         </div>

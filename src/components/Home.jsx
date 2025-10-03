@@ -1,6 +1,6 @@
-import LandingPage from "./assets/landingpage";
+import LandingPage from "./landingpage";
 import About_App from "./About_App";
-import {Footer} from "../Footer";
+import { Footer } from "../Footer";
 
 function Home() {
   return (
