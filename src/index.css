@@ -1,40 +1,41 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
-	--color-bag-color: #8EB7BD;
-	--font-delirium: "DELIRIUM NCV", ui-sans-serif, system-ui, sans-serif;
-	--font-delirium-neon: "DELIRIUM NEON NCV", ui-sans-serif, system-ui, sans-serif;
-	--color-card-color:#365E7C;
-	--color-event-color:#F6F0DC ;
-	}
-
-@font-face {
-	font-family: "DELIRIUM NCV";
-	src: url("/fonts/DELIRIUM_NCV.ttf") format("truetype");
-	font-weight: 400 900;
-	font-style: regular;
-	font-display: swap;
-	font-size: 128px;
+  --color-bag-color: #8eb7bd;
+  --font-delirium: "DELIRIUM NCV", ui-sans-serif, system-ui, sans-serif;
+  --font-delirium-neon: "DELIRIUM NEON NCV", ui-sans-serif, system-ui,
+    sans-serif;
+  --color-card-color: #365e7c;
+  --color-event-color: #f6f0dc;
 }
 
 @font-face {
-	font-family: "DELIRIUM NEON NCV";
-	src: url("/fonts/DELIRIUM_NEON_NCV.ttf") format("truetype");
-	font-weight: 400 900;
-	font-style: normal;
-	font-display: swap;
+  font-family: "DELIRIUM NCV";
+  src: url("/fonts/DELIRIUM_NCV.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: regular;
+  font-display: swap;
+  font-size: 128px;
+}
+
+@font-face {
+  font-family: "DELIRIUM NEON NCV";
+  src: url("/fonts/DELIRIUM_NEON_NCV.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: 'LexendDeca';
-  src: url('./assets/LexendDeca.ttf') format('truetype');
-  font-weight: normal; 
-  font-style: normal; 
-  font-display: swap; 
+  font-family: "LexendDeca";
+  src: url("/assets/LexendDeca.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: 'DeliriumNCV';
-  src: url('./assets/DeliriumNCV.ttf') format('truetype');
-  font-weight: normal; 
-  font-style: normal; 
-  font-display: swap; 
+  font-family: "DeliriumNCV";
+  src: url("/assets/DeliriumNCV.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
