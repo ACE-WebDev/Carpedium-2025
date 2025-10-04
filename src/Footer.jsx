@@ -2,9 +2,9 @@ import React from "react";
 export const Footer = () => {
   return (
     <>
-      <div className="bg-[url('/about_bg.svg')] bg-cover bg-center">
+      <div className="bg-[url('/about_bg.svg')] bg-cover bg-center -mt-px">
         <div>
-          <img src="/src/logo.png" className="mx-auto md:w-[350px] w-[220px]" />
+          <img src="/logo.png" className="mx-auto md:w-[350px] w-[220px]" />
         </div>
         <div className="text-white font-[DeliriumNCV] text-[5rem] text-center mb-10 hidden md:block">
           <p>Contact Us</p>
