@@ -1,13 +1,13 @@
 import "./About.css";
-import photoGrp from "/Photo_Grp.svg"; // this replaces the slider
+import photoGrp from "/Group_img.png"; 
 
 export default function About() {
   return (
     <section className="about-section">
-      {/* Mobile heading above image */}
+      {/* Mobile heading above image*/}
       <div className="mobile-heading">ABOUT CARPEDIEM</div>
 
-      {/* Single photo instead of slider */}
+      {/* Single photo */}
       <div className="wrap" style={{ textAlign: "center" }}>
         <img
           src={photoGrp}
