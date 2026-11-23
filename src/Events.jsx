@@ -76,7 +76,7 @@ function Events() {
               <ul className="flex gap-8 lg:gap-16 xl:gap-24 font-bold text-lg lg:text-xl items-center">
                 <li>
                   <a href="/" style={{ color: "#10124C" }} className="hover:opacity-70 transition-opacity">
-                    Home
+                    About
                   </a>
                 </li>
                 <li>

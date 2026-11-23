@@ -13,12 +13,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 60px 20px;
+  padding: 40px 20px 60px;
   background-image: url('/about_bg.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: white;
+  min-height: 100vh;
 }
 
 /* === PHOTO STYLE  === */
@@ -53,19 +54,19 @@
 .about-word {
   font-family: 'DeliriumNCV', 'FTY DELIRIUM NCV', sans-serif;
   font-weight: 400;
-  font-size: 230px; /* reduced from 230px */
+  font-size: clamp(120px, 15vw, 230px);
   letter-spacing: 0;
   text-transform: uppercase;
   color: #fff;
-  line-height: 1;
+  line-height: 0.9;
   white-space: nowrap;
   padding-top: 0.2rem;
 }
 
 .about-text {
   font-family: 'Lexend Deca', sans-serif;
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.6;
   color: #e0e0e0;
   text-align: justify;
   display: flex;
@@ -85,6 +86,10 @@
 }
 
 @media (max-width: 900px) {
+  .about-section {
+    padding: 30px 15px 50px;
+  }
+
   .mobile-heading,
   .about-paragraphs {
     display: block;
@@ -98,53 +103,50 @@
 
   .mobile-heading {
     font-family: 'DeliriumNCV', 'FTY DELIRIUM NCV', sans-serif;
-    font-size: 50px;
+    font-size: clamp(35px, 8vw, 50px);
     text-align: center;
     color: #fff;
-    margin-bottom: 20px;
-    white-space: nowrap;
+    margin-bottom: 25px;
+    line-height: 1.1;
   }
 
   .about-paragraphs {
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 10px;
-    max-width: 353px;
-    margin: 10px auto 20px auto;
-    font-size: 12px;
+    gap: 15px;
+    max-width: 90%;
+    margin: 20px auto;
+    font-size: clamp(11px, 3vw, 14px);
     color: #e0e0e0;
+    line-height: 1.5;
   }
 
   .about-photo {
-    max-width: 369.53px; /*  photo size for mobile */
-    height: 172.58px;
-    margin: 10px auto 20px auto;
+    max-width: 90%;
+    height: auto;
+    margin: 20px auto;
   }
 }
 
 @media (max-width: 520px) {
-  .mobile-heading {
-    font-size: 45px;
+  .about-section {
+    padding: 25px 10px 40px;
   }
+  
   .about-paragraphs {
-    font-size: 11px;
-    max-width: 300px;
-  }
-  .about-photo {
-    max-width: 280px;
+    gap: 12px;
+    margin: 15px auto;
   }
 }
 
 @media (max-width: 375px) {
-  .mobile-heading {
-    font-size: 40px;
+  .about-section {
+    padding: 20px 8px 35px;
   }
+  
   .about-paragraphs {
-    font-size: 10px;
-    max-width: 280px;
-  }
-  .about-photo {
-    max-width: 240px;
+    gap: 10px;
+    margin: 12px auto;
   }
 }
